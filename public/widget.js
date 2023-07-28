@@ -59,6 +59,26 @@ let frameBody = document.createElement("div");
 frameBody.id = "msv-frame-body"; // Set the id attribute of the frameBody div
 frameBody.style.cssText = "width: 100%; height: 100%;"; // Apply CSS styles to the frameBody div
 
+
+// Assuming this code is in the widget.js file
+// Get the current script element
+var scripts = document.getElementsByTagName('script');
+var widgetScript = scripts[scripts.length - 1];
+
+// Get the src attribute of the script element (should be the URL)
+var scriptUrl = widgetScript.src;
+
+// Create a URL object to parse the URL and retrieve the search parameters
+var url = new URL(scriptUrl);
+
+// Get the value of the 'params' parameter
+var paramsValue = url.searchParams.get('params');
+
+console.log(paramsValue,'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk'); // This will log the value of 'params' to the console
+
+
+
+
 // Create a new iframe element and assign it to the chatFrame variable
 let chatFrame = document.createElement("iframe");
 chatFrame.id = "msv-chat-frame"; // Set the id attribute of the chatFrame iframe
