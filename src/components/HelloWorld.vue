@@ -13,6 +13,11 @@ import axios from 'axios';
 
     beforeMount() {
 
+      // Get the value of the 'params' parameter from the iframe URL
+      var urlParams = new URLSearchParams(window.location.search);
+      var paramsValue = urlParams.get('params');
+      console.log(paramsValue),'retrived value'; // This will log 'test' in the iframe's console
+
       this.getArticles()
     },
 

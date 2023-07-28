@@ -70,7 +70,7 @@ console.log(paramsValue,'pleaseeeeeee'); // This will log 'test' to the console
 // Create a new iframe element and assign it to the chatFrame variable
 let chatFrame = document.createElement("iframe");
 chatFrame.id = "msv-chat-frame"; // Set the id attribute of the chatFrame iframe
-chatFrame.src = "https://sakthi002.github.io/faveo-widget/"; // Set the src attribute of the chatFrame iframe
+chatFrame.src = "https://sakthi002.github.io/faveo-widget/?params=" + encodeURIComponent(paramsValue); // Set the src attribute of the chatFrame iframe
 chatFrame.setAttribute("frameborder", "none"); // Set the frameborder attribute of the chatFrame iframe
 chatFrame.setAttribute("width", "100%"); // Set the width attribute of the chatFrame iframe
 chatFrame.setAttribute("height", "100%"); // Set the height attribute of the chatFrame iframe
